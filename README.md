@@ -3,7 +3,7 @@
 
 # Data Mining Project
 
-![Diseño sin título](https://github.com/yulimezab/Data-Mining-Project/blob/main/images/portada.jpg)
+![Diseño sin título]("images/portada.jpg")
 
 ## Project Overview
 This project is divided into multiple deliveries, each focusing on different aspects of data mining, from data selection and exploration to migration, modeling, and dashboard presentation.
