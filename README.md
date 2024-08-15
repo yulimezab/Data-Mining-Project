@@ -1,4 +1,9 @@
-# 📊 Data Mining Project
+
+
+
+# Data Mining Project
+
+![Diseño sin título](https://github.com/yulimezab/Data-Mining-Project/blob/main/images/portada.jpg)
 
 ## Project Overview
 This project is divided into multiple deliveries, each focusing on different aspects of data mining, from data selection and exploration to migration, modeling, and dashboard presentation.
@@ -8,80 +13,42 @@ This project is divided into multiple deliveries, each focusing on different asp
 ## Delivery 1: Data Selection  
 **Due Date: 16/08/2024**
 
-- **Justification**  
-  Explain why you chose this particular dataset.
+### Dataset Chosen
+The dataset selected for this project is the **"Flight Price Prediction"** dataset, which includes **300,261 datapoints** and **11 features**. The data was scraped from the **"Ease My Trip"** website, covering flight bookings between India's top 6 metro cities over a 50-day period in early 2022.
 
-- **Relevance**  
-  Describe how the chosen dataset aligns with the project goals and the type of data available. Provide references to similar use cases or studies where this type of dataset has been employed.
+### Justification
 
----
+#### 📈 Comprehensive Data
+The dataset contains a substantial number of observations (**300,261**), providing a rich source of information for training robust models. The large sample size ensures that the insights derived from the analysis are statistically significant and generalizable.
 
-## Delivery 2: Exploratory Data Analysis (EDA)  
-**Due Date: 13/09/2024**
+#### 🎯 Relevance to Project Goals
+The primary objective of this project is to analyze factors influencing flight ticket prices and predict prices based on these factors. The dataset includes key features such as airline, source and destination cities, departure and arrival times, ticket class, and days left until departure. These features are directly aligned with the research questions we aim to address, making this dataset ideal for the project.
 
-- **Data Overview**  
-  Summarize the dataset, including the number of observations, variables, and data types.
+#### 🔄 Categorical and Continuous Variables
+The dataset offers a mix of categorical and continuous variables, allowing for diverse analyses. This variety supports the application of different statistical methods and machine learning algorithms, such as linear regression, which is planned for this study.
 
-- **Exogenous Repositories**  
-  Identify and describe any external data sources that can be integrated to enhance the analysis. Explain the relevance and potential impact of this additional data.
+#### 🌐 Real-World Applicability
+The dataset is derived from a real-world booking platform, making the findings and predictions highly applicable to actual scenarios faced by passengers and airlines. The insights gained could inform pricing strategies, help passengers make more informed booking decisions, and contribute to academic research on dynamic pricing models in the airline industry.
 
-- **Data Visualization**  
-  Create visualizations to uncover patterns, trends, and outliers in the data. Use graphs, charts, and plots to illustrate your findings.
+### Relevance
 
-- **Data Cleaning**  
-  Detail the process of cleaning the data, including handling missing values, outliers, and inconsistencies. Document any transformations or normalizations applied.
+The **"Flight Price Prediction"** dataset aligns closely with the project goals, which involve analyzing and predicting flight prices based on several factors. The type of data available (categorical and continuous) is well-suited for answering the research questions, such as:
 
-- **Data Imputation**  
-  Explain the methods used for imputing missing values and justify the choice of techniques.
+- **Price Variation by Airline**: The dataset includes the "Airline" feature, which allows for an analysis of how different airlines price their tickets under various conditions.
+  
+- **Impact of Booking Time**: The "Days Left" feature provides the necessary data to explore how booking closer to the departure date affects ticket prices.
+  
+- **Effect of Departure and Arrival Times**: The "Departure Time" and "Arrival Time" features enable an examination of how flight schedules influence pricing.
+  
+- **Class-Based Price Differences**: The "Class" feature allows for a direct comparison between the pricing of economy and business class tickets.
 
----
+### References to Similar Use Cases
 
-## Delivery 3: Data Migration to BigQuery  
-**Due Date: 18/10/2024**
+- **📊 Dynamic Pricing Studies**: Similar datasets have been used in studies exploring dynamic pricing models, where factors like booking time, demand, and competition among airlines influence ticket prices.
 
-- **Migration Plan**  
-  Outline the steps for migrating the data to BigQuery, including data preparation, schema design, and loading strategies.
-
-- **Execution**  
-  Describe the execution of the migration process, including any challenges encountered and how they were resolved.
-
-- **Models**  
-  Any database/data warehouse model you may think is reasonable to present.
-
-- **Model Preparation**  
-  - **Model Selection:** Choose a model and prepare it for training.
-  - **Training:** Describe the training process, including the data split strategy (training, validation, testing), hyperparameter tuning, and the computational resources used.
-  - **Cross Validation:** Explain the cross-validation method applied and the rationale behind choosing it. Present the results and discuss their implications.
-  - **Metrics and Results Analysis:** Evaluate the model performance using appropriate metrics. Provide a detailed analysis of the results, including accuracy, precision, recall, F1 score, or any other relevant metrics. Discuss any discrepancies or insights gained.
+- **✈️ Airline Pricing Strategies**: Research on airline pricing strategies often utilizes datasets with features similar to those in this dataset to develop models that predict price fluctuations and optimize revenue management.
 
 ---
 
-## Delivery 4: Dashboard Presentation  
-**Due Date: 15/11/2024**
 
-- **Dashboard Design**  
-  Describe the design and layout of the dashboard. Explain the choice of visual elements and how they contribute to an intuitive and informative user experience.
-
-- **Implementation**  
-  Detail the tools and technologies used to create the dashboard. Include any integration with BigQuery or other data sources.
-
-- **Presentation of Results**  
-  Use the dashboard to present the final results of your project. Highlight key findings, trends, and actionable insights derived from the analysis.
-
-- **User Interaction**  
-  Explain how users can interact with the dashboard, including filtering, sorting, and drilling down into the data. Provide examples of different user scenarios.
-
----
-
-## Final Presentation  
-**(Last day of classes)**
-
-- **Overview**  
-  Summarize the entire project, including the problem statement, methodology, key findings, and conclusions.
-
-- **Feedback Incorporation**  
-  Discuss how feedback from each homework was incorporated into the final project.
-
-- **Future Work**  
-  Suggest possible extensions or improvements for the project. Identify any limitations and propose solutions for future iterations.
 
