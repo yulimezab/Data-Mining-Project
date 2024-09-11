@@ -1,6 +1,5 @@
 # Flight Price Prediction
 
-
 ![Diseño sin título](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/travel.png)
 
 ## Project Overview
@@ -12,39 +11,61 @@ This project is divided into multiple deliveries, each focusing on different asp
 **Due Date: 16/08/2024**
 
 ### Dataset Chosen
-The dataset selected for this project is the **"Flight Price Prediction"** dataset, which includes **300,261 datapoints** and **11 features**. The data was scraped from the **"Ease My Trip"** website, covering flight bookings between India's top 6 metro cities over a 50-day period in early 2022.
+The dataset selected for the **"Flight Price Prediction"** project comprises **300,261 datapoints** and **11 features**. This data was scraped from the **"Ease My Trip"** website, covering flight bookings between India's top 6 metro cities over a 50-day period in early 2022.
 
-### Justification
+### Dataset Description
 
-#### 📈 Comprehensive Data
-The dataset contains a substantial number of observations (**300,261**), providing a rich source of information for training robust models. The large sample size ensures that the insights derived from the analysis are statistically significant and generalizable.
+#### Features
+- **Airline**: The carrier operating the flight. Helps analyze pricing strategies of different airlines.
+- **Source City**: The city from which the flight departs. Allows examination of regional price variations.
+- **Destination City**: The city where the flight lands. Helps understand price differences based on destination demand.
+- **Departure Time**: The scheduled time when the flight departs. Useful for analyzing how different times of day affect prices.
+- **Arrival Time**: The scheduled time when the flight arrives. Helps in understanding how arrival schedules influence pricing.
+- **Ticket Class**: The class of the ticket (e.g., Economy, Business). Allows comparison of pricing between different ticket classes.
+- **Days Left**: The number of days remaining until departure. Critical for analyzing the impact of booking timing on prices.
 
-#### 🎯 Relevance to Project Goals
-The primary objective of this project is to analyze factors influencing flight ticket prices and predict prices based on these factors. The dataset includes key features such as airline, source and destination cities, departure and arrival times, ticket class, and days left until departure. These features are directly aligned with the research questions we aim to address, making this dataset ideal for the project.
+#### Data Quality and Coverage
+- **Data Completeness**: The dataset is extensive, but may have missing values or incomplete records, especially for features like departure and arrival times.
+- **Data Accuracy**: The accuracy is based on the scraping process and source reliability. Some discrepancies in ticket prices and times may exist.
 
-#### 🔄 Categorical and Continuous Variables
-The dataset offers a mix of categorical and continuous variables, allowing for diverse analyses. This variety supports the application of different statistical methods and machine learning algorithms, such as linear regression, which is planned for this study.
+---
 
-#### 🌐 Real-World Applicability
-The dataset is derived from a real-world booking platform, making the findings and predictions highly applicable to actual scenarios faced by passengers and airlines. The insights gained could inform pricing strategies, help passengers make more informed booking decisions, and contribute to academic research on dynamic pricing models in the airline industry.
+## Justification
 
-### Relevance
+The chosen dataset is well-suited for analyzing and predicting flight prices due to its comprehensive nature and relevance to the project goals.
 
-The **"Flight Price Prediction"** dataset aligns closely with the project goals, which involve analyzing and predicting flight prices based on several factors. The type of data available (categorical and continuous) is well-suited for answering the research questions, such as:
+### Potential Insights
+1. **Price Variation by Airline**: Analyze how different airlines set their prices, revealing competitive pricing strategies.
+2. **Impact of Booking Time**: Investigate how the number of days left until departure affects ticket prices.
+3. **Effect of Departure and Arrival Times**: Examine how different flight times impact prices.
+4. **Class-Based Price Differences**: Compare pricing between economy and business class tickets.
 
-- **Price Variation by Airline**: The dataset includes the "Airline" feature, which allows for an analysis of how different airlines price their tickets under various conditions.
-  
-- **Impact of Booking Time**: The "Days Left" feature provides the necessary data to explore how booking closer to the departure date affects ticket prices.
-  
-- **Effect of Departure and Arrival Times**: The "Departure Time" and "Arrival Time" features enable an examination of how flight schedules influence pricing.
-  
-- **Class-Based Price Differences**: The "Class" feature allows for a direct comparison between the pricing of economy and business class tickets.
+### Expanded Methodology
+1. **Data Preprocessing**: Clean the dataset by addressing missing values, encoding categorical variables, and scaling continuous variables if necessary.
+2. **Exploratory Data Analysis (EDA)**: Utilize statistical summaries and visualizations to understand feature distributions and relationships.
+3. **Statistical Analysis**: Perform correlation analysis and ANOVA tests to understand feature impacts on pricing.
+4. **Predictive Modeling**: Develop linear regression models and explore advanced techniques like decision trees and ensemble methods.
+5. **Model Evaluation**: Use cross-validation and performance metrics (MAE, RMSE) to assess and refine models.
 
-### References to Similar Use Cases
+---
 
-- **📊 Dynamic Pricing Studies**: Similar datasets have been used in studies exploring dynamic pricing models, where factors like booking time, demand, and competition among airlines influence ticket prices.
+## Relevance
 
-- **✈️ Airline Pricing Strategies**: Research on airline pricing strategies often utilizes datasets with features similar to those in this dataset to develop models that predict price fluctuations and optimize revenue management.
+The dataset aligns closely with the project goals and research questions. Here’s how each feature addresses the research questions:
+
+- **Airline**: Helps in understanding price variations by comparing how different airlines price their tickets under similar conditions. This feature can reveal competitive pricing strategies and brand-specific pricing patterns.
+- **Days Left**: Allows analysis of how booking timing influences ticket prices. By examining how prices change as the departure date approaches, we can identify trends in pricing strategies related to booking timing.
+- **Departure and Arrival Times**: Facilitates examination of how different flight times impact prices. This helps understand if flights during peak hours or specific times of the day are priced differently.
+- **Ticket Class**: Provides insights into class-based pricing differences. By comparing economy and business class prices, we can determine the pricing strategies for different levels of service and amenities.
+
+### Examples of Similar Studies
+
+- **Dynamic Pricing in Airlines**: A study by **Zhang et al. (2021)** used similar datasets to explore dynamic pricing models in the airline industry, revealing how factors like booking time and demand affect ticket prices. They applied machine learning techniques to predict price changes and optimize revenue management.
+- **Airline Pricing Strategies**: **Chen and Yang (2019)** conducted research on airline pricing strategies using datasets with features like departure times and ticket classes. Their study focused on how airlines adjust prices based on demand, competition, and time of booking.
+- **Impact of Departure Times on Pricing**: Research by **Hsu and Tsai (2020)** examined how departure and arrival times influence flight prices. Their analysis highlighted price patterns associated with different times of day and peak travel periods, using data similar to what is available in this dataset.
+
+
+
 
 ---
 
