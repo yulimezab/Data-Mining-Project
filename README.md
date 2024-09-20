@@ -69,5 +69,147 @@ The dataset aligns closely with the project goals and research questions. Hereâ€
 
 ---
 
+## Delivery 1: Data Selection  
+**Due Date:  13/09/2024**
+
+## Exploratory Data Analysis (EDA)
+
+### Data Overview
+
+The dataset used for flight price prediction consists of **300,153 observations** and **12 variables**. Below is a summary of the dataset's key details:
+
+- **Total rows (observations):** 300,153
+- **Total columns (variables):** 12
+- **Dataset size:** 27.5 MB
+
+#### Variable Description:
+
+| Column             | Data Type | Description                                  |
+|--------------------|-----------|----------------------------------------------|
+| Unnamed: 0         | int64     | Index column (not used in analysis)          |
+| airline            | object    | Airline operating the flight                 |
+| flight             | object    | Flight identification                        |
+| source_city        | object    | City from which the flight departs           |
+| departure_time     | object    | Scheduled flight departure time              |
+| stops              | object    | Number of stops during the flight            |
+| arrival_time       | object    | Scheduled flight arrival time                |
+| destination_city   | object    | Destination city of the flight               |
+| class              | object    | Ticket class (e.g., economy, business)       |
+| duration           | float64   | Duration of the flight in hours              |
+| days_left          | int64     | Days left until flight departure             |
+| price              | int64     | Flight ticket price (in local currency)      |
+
+#### Data Types:
+- **Numerical variables (4):** `Unnamed: 0`, `duration`, `days_left`, `price`
+- **Categorical variables (8):** `airline`, `flight`, `source_city`, `departure_time`, `stops`, `arrival_time`, `destination_city`, `class`
+
+---
+
+### Exogenous Repositories
+
+The following external data could enhance the accuracy of flight price predictions:
+
+#### 1. **Tourism Demand or Seasonality Data**
+This data can help explain price variations based on flight destinations.
+
+- **Relevance:** Tourism demand fluctuates based on seasons and events, affecting flight prices. Prices tend to increase during peak seasons and decrease during off-seasons.
+
+- **Potential Impact:**
+  - Improved price prediction by identifying demand spikes.
+  - Isolate seasonal effects to better understand price fluctuations unrelated to other factors.
+
+#### 2. **Fuel Price Data**
+Fuel price data reflects the operational costs of airlines.
+
+- **Relevance:** Fuel costs directly influence airline operational expenses, which in turn affect ticket prices.
+
+- **Potential Impact:**
+  - Predict price changes based on fluctuations in fuel costs.
+  - Identify long-term trends that could impact flight prices.
+
+Incorporating these additional datasets will allow for more accurate price predictions and a better understanding of the factors driving flight price variations.
+
+---
+
+### Data Visualization
+
+First, let's look at the proportion of occurrences for some interesting categorical variables:
+
+![Departure and Arrival Times](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/DepartureAndArrival.png)
+
+![Airlines and Ticket Class](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/AirlinesAndClass.png)
+
+![Source and Destination Cities](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/SourceAndDestination.png)
+
+Next, let's examine the distribution of the numerical variables in our dataset:
+
+![Duration and Days Left Distribution](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/DurationAndDistribution.png)
+
+![Price Distribution](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/PriceDistribution.png)
+
+Now, let's check for outliers in the numerical columns:
+
+![Duration, Days Left, and Price Boxplots](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/DurationDaysPrice.png)
+
+We can observe that there are outliers in the `duration` and `price` columns.
 
 
+---
+
+## Data Cleaning
+
+### Null Values Check
+We verified that there are no null values across any of the columns in the dataset. All columns were complete.
+
+### Duplicate Values Check
+We confirmed that there are no duplicate records in the dataset, ensuring the integrity of the data.
+
+### Removing Unnecessary Columns
+The `Unnamed` column, which was irrelevant to the analysis, was removed for clarity.
+
+### Unique Values in Columns
+The dataset contains the following number of unique values in each column:
+
+- **Airline**: 6 unique values
+- **Flight**: 1561 unique values
+- **Source City**: 6 unique values
+- **Departure Time**: 6 unique values
+- **Stops**: 3 unique values
+- **Arrival Time**: 6 unique values
+- **Destination City**: 6 unique values
+- **Class**: 2 unique values
+- **Duration**: 476 unique values
+- **Days Left**: 49 unique values
+- **Price**: 12,157 unique values
+
+### Encoding Categorical Data
+We converted the categorical variable `stops` into numerical format to facilitate modeling.
+
+![Duration, Days Left, and Price Boxplots](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/HeadData.png)
+
+### Reordering Columns
+The `encoded_stops` column was moved to a more logical position for easier analysis.
+
+![Reordered Columns](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/EncodedStops.png)
+
+### Statistical Summary of Numerical Columns
+Below is the statistical description of the numeric columns in the dataset, showing key metrics such as mean, standard deviation, minimum, and maximum values.
+
+![Numeric Statistics](https://raw.githubusercontent.com/yulimezab/Data-Mining-Project/main/images/NumericStats.png)
+
+
+---
+
+## Data Imputation
+
+In this dataset, no missing values were found, as confirmed by the earlier data exploration step. Therefore, no data imputation was necessary.
+
+### Common Imputation Techniques
+If missing values were present, the following imputation techniques could have been considered:
+- **Mean/Median Imputation**: For numerical variables, imputing missing values with the mean or median is common, depending on whether the data is skewed.
+- **Mode Imputation**: For categorical variables, the most frequent value (mode) could be used to replace missing values.
+- **Forward/Backward Fill**: For time series data, missing values can be filled by propagating previous or next valid values.
+- **K-Nearest Neighbors (KNN) Imputation**: This technique finds the nearest neighbors based on a distance metric and imputes missing values by averaging the values of these neighbors.
+
+### Justification
+Since the dataset is complete and free from missing data, none of these techniques were required in this project. This ensures that no bias was introduced through the imputation process.
