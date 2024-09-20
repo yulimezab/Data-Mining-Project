@@ -6,6 +6,15 @@
 This project is divided into multiple deliveries, each focusing on different aspects of data mining, from data selection and exploration to migration, modeling, and dashboard presentation.
 
 ---
+### Our Team
+
+| ![Integrante 1]([https://github.com/wilsone24/Optimization-Project/assets/118389840/1ad141ba-4520-4d3e-add6-724df3f272ce](https://github.com/yulimezab/Data-Mining-Project/blob/main/foto_shadia.jpeg))  | ![Integrante 2](https://github.com/yulimezab/Data-Mining-Project/blob/main/foto_yuli.png)  |
+| --- | --- |
+| **Data engineer** Shadia Jafaar is a student at the Universidad del Norte in the systems engineering program in seventh semester, graduated from Biffi La Salle school in 2020, his area of interest is focused on the management of big data, cloud computing and technology sales. He has knowledge in various programming languages but focuses mainly on python and sql for data manipulation. He is passionate about sports and learning new things. The role he will develop in the team will be a data engineer and he will be one of the people in charge of data manipulation and data cleaning. | **Data engineer** Yuli Meza Barros, 22 years old student on 9th-semester of systems engineering at Universidad del Norte, completed her studies at Nuestra Señora de Lourdes School in 2019. With a profound interest in cybersecurity, she demonstrates proficiency in Java and Python programming languages. Her fascination extends to data analytics, showcasing a versatile skill set. In the team, Yuli plays a vital role as a data engineer, specializing in meticulous data manipulation and cleaning processes  Her diverse interests and skills contribute to the dynamic and collaborative environment within the team. |
+
+| ![Integrante 3]([https://github.com/wilsone24/Optimization-Project/assets/118389840/d1a88f04-6a50-42de-9387-6965a03343dd](https://github.com/yulimezab/Data-Mining-Project/blob/main/foto_david.jpeg))  | ![Integrante 4]([https://github.com/wilsone24/Optimization-Project/assets/118389840/85134bbd-01ca-44b2-8ed7-af2ecd0a8bcb](https://github.com/yulimezab/Data-Mining-Project/blob/main/foto_julian.jpeg))  |
+| --- | --- |
+| **Backend engineer** David Meza, a seventh-semester student at Universidad del Norte, graduated from nuevo colegio del prado, has a keen interest in backend development, databases, and distributed systems. With a passion for crafting robust solutions and learning from existent ones. Outside of the tech realm, Felipe enjoys expressing his creativity through drawing and has a particular fondness for manga. | **Frontend engineer** Julián Coll, a seventh-semester systems engineering student at Universidad del Norte, graduated from I.E.T.C. Francisco Javier Cisneros at 2020, who has some experience in backend development and database management. Proficient in Python, SQL, and relational databases. Dedicated to designing efficient systems to meet project goals. I am responsible for the visual part of the project emphasizing the user experience. |
 
 ## Delivery 1: Data Selection  
 **Due Date: 16/08/2024**
@@ -69,7 +78,7 @@ The dataset aligns closely with the project goals and research questions. Here�
 
 ---
 
-## Delivery 1: Data Selection  
+## Delivery 2: Data Selection  
 **Due Date:  13/09/2024**
 
 ## Exploratory Data Analysis (EDA)
