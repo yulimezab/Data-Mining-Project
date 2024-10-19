@@ -222,3 +222,21 @@ If missing values were present, the following imputation techniques could have b
 
 ### Justification
 Since the dataset is complete and free from missing data, none of these techniques were required in this project. This ensures that no bias was introduced through the imputation process.
+
+
+
+---
+
+
+## Delivery 3: Data Migration to BigQuery and Model Preparation
+**Due date: 18/10/2024**
+
+##Data Migration:
+
+In order to upload the Pandas dataframes used to training our model, we first had to create a new Google Cloud Project. Within it, we also created a new dataset, which would contain the previously mentioned dataframes.
+
+Once everything was set and ready, we used pandas_gbq.to_gbq() function in Google Colab to upload all the files into the newly created dataset.
+
+However, for this method to work, we first needed a way to access GCP within Google Colab. So we created a service account and generated a new JSON key, which we granted the Owner role for now.
+
+After using the key in the pandas_gbq.to_gbq() function, we were able to upload the neccesary files to GCP.
