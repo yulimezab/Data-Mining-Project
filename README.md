@@ -240,3 +240,57 @@ Once everything was set and ready, we used pandas_gbq.to_gbq() function in Googl
 However, for this method to work, we first needed a way to access GCP within Google Colab. So we created a service account and generated a new JSON key, which we granted the Owner role for now.
 
 After using the key in the pandas_gbq.to_gbq() function, we were able to upload the neccesary files to GCP.
+
+## Chosen Model
+
+Ridge regression is a type of linear regression that includes a regularization term to penalize the magnitude of the coefficients of the model. It adds an L2 regularization term to the cost function, which is the sum of the squared coefficients. This regularization term helps to prevent the model from overfitting by shrinking the coefficients, which means it reduces the model's complexity without affecting its predictive power significantly. 
+
+## Training Process
+
+The first step in building a machine learning model is to divide the data into training and testing sets. This is done to evaluate the model's performance on unseen data and prove the generalization ability of the model. For the Ridge model predicting flight prices, the data would be split into a training set 80% of data and a test set (the remaining 20%).
+
+### Training set:
+
+Used to train the model, where the model learns the relationship between features and the target variable (flight price). 
+
+### Test set:
+
+Used to evaluate how well the model generalizes to new data. It helps in assessing the model's prediction accuracy and detecting overfitting or underfitting. 
+
+For this project, we used the train_test_split function. It consists of randomly dividing the original dataset into two parts: a training set and a test set, using a specified proportion (e.g., 70% for training and 30% for testing). 
+
+## Hyperparameter Tunning: 
+
+Machine learning models often include hyperparameters. Ridge regression includes a hyperparameter called the regularization parameter (alpha), which controls the complexity of the model. However, finding the optimal value is not trivial, so we use a grid search to achieve this. This method systematically tests a range of possible values for the hyperparameter. 
+
+First, we define a set of candidate values for alpha (e.g., [0.01, 0.1, 1, 10, 100]). The algorithm evaluates the model's performance for each value and selects the one that maximizes the metric of interest (in this case, we chose R²) 
+
+## Cross validation: 
+
+Cross-validation helps to ensure that the model's performance is evaluated more robustly. Using cv=5 means that the data is split into 5 "folds": 
+
+The data is divided into five equal parts. 
+
+In each iteration, four parts are used for training, and one part is used for validation. 
+
+This process repeats five times, with each fold serving as the validation set once. 
+
+After the five iterations, the results are averaged to get a more reliable estimate of the model's performance. 
+
+## Metrics and Results Analysis: 
+
+- Mean Squared Error (MSE): indicates the average squared difference between the predicted and actual flight prices. Since MSE squares the differences between the predicted and actual values, the resulting value is in squared units. This makes it less interpretable in the context of the original units. 
+
+- Root Mean Squared Error (RMSE): gives an estimate of the standard deviation of the prediction errors in the original units (e.g., dollars). This suggests that, on average, the model's predictions are off by approximately $6814. 
+
+- Mean Absolute Error (MAE): shows the average absolute difference between the predicted and actual flight prices. The given value indicates that the Ridge regression model's predictions for flight prices are, on average, $4500.71 away from the actual prices. 
+
+- R² Score:  indicates that the model explains about 91% of the variance in the flight prices. This suggests a strong fit, meaning the model captures most of the variability in the data. 
+
+- Best Hyperparameters: The optimal value for the regularization parameter alpha was found to be 0.1. This indicates a moderate level of regularization, which helps prevent overfitting while still fitting the data well.
+
+
+
+
+
+
